@@ -123,3 +123,15 @@ function displayOrders() {
 // Muestra el historial de pedidos al cargar la página
 document.addEventListener("DOMContentLoaded", displayOrders);
 console.log('El archivo script.js está cargado correctamente');
+emailjs.send("template_4o53im4_ID", "template_4o53im4_ID", {
+    from_name: name, // nombre del cliente
+    phone: phone, // teléfono
+    delivery_date: deliveryDate, // fecha de entrega
+    weight: weight, // peso en kg
+    filling: filling, // relleno
+    cover: cover, // cubierta
+    candles: candles, // número de velas
+    notes: notes, // anotaciones adicionales
+    total_amount: totalAmount, // importe total
+    deposit: deposit // anticipo
+});
